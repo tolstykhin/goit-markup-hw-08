@@ -1,0 +1,206 @@
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: opacity 250ms linear, visibility 250ms linear;
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+.modal {
+  width: 528px;
+  min-height: 581px;
+  padding: 40px;
+  background-color: var(--white-color);
+  border-radius: 4px;
+  position: relative;
+  transform: scale(1);
+  transition: transform 250ms linear;
+}
+.backdrop.is-hidden .modal {
+  transform: scale(2);
+}
+.modal__close-btn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    
+  }
+.modal__close-icon {
+    width: 18px;
+    height: 18px;
+    fill: #000000;
+    transition: fill var(--transform-time) var(--transform-function);
+    .modal__close-btn:hover &,
+    .modal__close-btn:focus & {
+      fill: var(--accent-color);
+    }
+  }
+.modal__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    margin-bottom: 12px;
+
+    color: var(--titel-text-color);
+  }
+.modal-form__filed {
+    margin-bottom: 10px;
+  }
+.modal-form__lable {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+
+    color: var(--primery-text-color);
+    cursor: pointer;
+  }
+.modal-form__input-wrapper {
+    display: block;
+    position: relative;
+  }
+.modal-form__input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding-left: 42px;
+    padding-right: 16px;
+    cursor: pointer;
+    outline: none;
+
+    transition: border-color var(--transform-time) var(--transform-function);
+
+    &:focus {
+      border-color: var(--accent-color);
+    }
+  }
+.modal-form__icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 18px;
+    height: 18px;
+
+    transition: fill var(--transform-time) var(--transform-function);
+
+    .modal-form__input:focus + & {
+    fill: var(--accent-color);
+  }
+  }
+.modal-form__textarea {
+  display: block;
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px 16px;
+  resize: none;
+  cursor: pointer;
+  outline: none;
+
+  transition: border-color var(--transform-time) var(--transform-function);
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+.coment-form {
+  margin-bottom: 0;
+}
+textarea::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px; 
+}
+
+  
+
+  .checkbox__modal {
+    position: absolute;
+    cursor: pointer;
+  }
+  .checkbox__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.71;
+
+    color: var(--primery-text-color);
+    cursor: pointer;
+  }
+  .checkbox__active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--nav-color);
+    border-radius: 3px;
+    margin-right: 8px;
+
+    transition: border-color var(--transform-time) var(--transform-function),
+      background-color var(--transform-time) var(--transform-function);
+      
+    .checkbox:hover & {
+      border-color: var(--accent-color);
+    }
+    .checkbox__modal:checked + .checkbox__label & {
+      border-color: var(--accent-color);
+      background-color: var(--accent-color);
+    }
+    
+  }
+  .checkbox__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 15px;
+    fill: var(--white-color);
+  }
+  .checkbox__link {
+    font-size: 14px;
+    line-height: 1.71;
+    text-decoration-line: underline;
+
+    color: var(--accent-color);
+  }

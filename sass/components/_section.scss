@@ -1,0 +1,20 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section__title {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--titel-text-color);
+  }
+.section--no-pading-top{
+    padding-top: 0;
+  }
+.section--bg-gray{
+    background-color: var(--section-bg-color);
+  }
+
