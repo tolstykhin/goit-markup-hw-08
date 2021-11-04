@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WEB</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/main.min.css">
@@ -16,9 +16,9 @@
             <nav class="navigation">
                 <ul class="navigation-menu">
                     <li class="navigation-menu__item"><a href="./index.html"
-                            class="navigation-menu__link">Студия</a></li>
-                    <li class="navigation-menu__item"><a href="./portfolio.html"
-                            class="navigation-menu__link navigation-menu__link--active">Портфолио</a></li>
+                            class="navigation-menu__link navigation-menu__link--active">Студия</a></li>
+                    <li class="navigation-menu__item"><a href="./portfolio.html" class="navigation-menu__link">Портфолио</a>
+                    </li>
                     <li class="navigation-menu__item"><a href="" class="navigation-menu__link">Контакты</a></li>
                 </ul>
             </nav>
@@ -32,6 +32,35 @@
                             <use href="./imeg/symbol-defs.svg#icon-smartphone"></use>
                         </svg>+38 096 111 11 11</a></li>
             </ul>
+            <button class="header__mob-menu-btn js-open-menu" aria-expanded="false" aria-controls="">
+                <svg class="header__mob-menu-icon">
+                    <use href="./imeg/symbol-defs.svg#icon-mobile-menu"></use>
+                </svg>
+            </button>
+            <div class="container mob-container js-menu-container" id="mobile-menu">
+                <button class="header__mob-menu-btn js-close-menu">
+                    <svg class="header__mob-menu-icon">
+                        <use href="./imeg/symbol-defs.svg#icon-close-mobile-menu"></use>
+                    </svg>
+                </button>
+                <ul class="mobile-nav-menu">
+                    <li class="mobile-nav-menu__item"><a href="./index.html"
+                            class="mobile-nav-menu__link">Студия</a></li>
+                    <li class="mobile-nav-menu__item"><a href="./portfolio.html" class="mobile-nav-menu__link mobile-nav-menu__link--active">Портфолио</a>
+                    </li>
+                    <li class="mobile-nav-menu__item"><a href="" class="mobile-nav-menu__link">Контакты</a></li>
+                </ul>
+                <div class="mob-menu-bottom">
+                    <a href="tel:+380961111111" class="mob-menu-bottom__tel">+38 096 111 11 11</a>
+                    <a href="mailto:info@devstudio.com" class="mob-menu-bottom__mail">info@devstudio.com</a>
+                    <ul class="mob-menu-social">
+                        <li class="mob-menu-social__item"><a href="" class="mob-menu-social__link"></a>Instagram</li>
+                        <li class="mob-menu-social__item"><a href="" class="mob-menu-social__link"></a>Twitter</li>
+                        <li class="mob-menu-social__item"><a href="" class="mob-menu-social__link"></a>Facebook</li>
+                        <li class="mob-menu-social__item"><a href="" class="mob-menu-social__link"></a>LinkedIn</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
     <main class="">
@@ -61,7 +90,12 @@
                     <li class="portfolio-list__item">
                         <a href="" class="portfolio-list__link">
                             <div class="portfolio-list__overlay">
-                                <img src="./imeg/portfolioimg1.jpg" alt="монитор ноутбука" width="370" height="294"> 
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./imeg/portfolio-1-min.jpg 1x, ./imeg/portfolio-1@2x-min.jpg 2x">
+                                    <source media="(min-width: 768px)" srcset="./imeg/portfolio-1-min.jpg 1x, ./imeg/portfolio-1@2x-min.jpg 2x">
+                                    <source media="(min-width: 480px)" srcset="./imeg/portfolio-1-min.jpg 1x, ./imeg/portfolio-1@2x-min.jpg 2x">
+                                    <img src="./imeg/portfolio-1-min.jpg" alt="монитор ноутбука" width="370" height="294">
+                                </picture>
                                 <p class="portfolio-list__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
                                 шпионажа и атак на защищённые сервера конкурентов.</p>
                             </div>
@@ -74,7 +108,12 @@
                     <li class="portfolio-list__item">
                         <a href="" class="portfolio-list__link">
                             <div class="portfolio-list__overlay">
-                                <img src="./imeg/portfolioimg2.jpg" alt="два баскетболиста сражаются за мяч" width="370" height="294">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./imeg/portfolio-2-min.jpg 1x, ./imeg/portfolio-2@2x-min.jpg 2x">
+                                    <source media="(min-width: 768px)" srcset="./imeg/portfolio-2-min.jpg 1x, ./imeg/portfolio-2@2x-min.jpg 2x">
+                                    <source media="(min-width: 480px)" srcset="./imeg/portfolio-2-min.jpg 1x, ./imeg/portfolio-2@2x-min.jpg 2x">
+                                    <img src="./imeg/portfolio-2-min.jpg" alt="два баскетболиста сражаются за мяч" width="370" height="294">
+                                </picture>                                
                                 <p class="portfolio-list__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
                                     для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                             </div>
@@ -87,7 +126,12 @@
                     <li class="portfolio-list__item">
                         <a href="" class="portfolio-list__link">
                             <div class="portfolio-list__overlay">
-                                <img src="./imeg/portfolioimg3.jpg" alt="эмблема ресторана" width="370" height="294">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./imeg/portfolio-3-min.jpg 1x, ./imeg/portfolio-3@2x-min.jpg 2x">
+                                    <source media="(min-width: 768px)" srcset="./imeg/portfolio-3-min.jpg 1x, ./imeg/portfolio-3@2x-min.jpg 2x">
+                                    <source media="(min-width: 480px)" srcset="./imeg/portfolio-3-min.jpg 1x, ./imeg/portfolio-3@2x-min.jpg 2x">
+                                    <img src="./imeg/portfolio-3-min.jpg" alt="эмблема ресторана" width="370" height="294">
+                                </picture>                                
                                 <p class="portfolio-list__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
                                     для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                             </div>
@@ -100,7 +144,12 @@
                     <li class="portfolio-list__item">
                         <a href="" class="portfolio-list__link">
                             <div class="portfolio-list__overlay">
-                                <img src="./imeg/portfolioimg4.jpg" alt="наушники" width="370" height="294">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./imeg/portfolio-4-min.jpg 1x, ./imeg/portfolio-4@2x-min.jpg 2x">
+                                    <source media="(min-width: 768px)" srcset="./imeg/portfolio-4-min.jpg 1x, ./imeg/portfolio-4@2x-min.jpg 2x">
+                                    <source media="(min-width: 480px)" srcset="./imeg/portfolio-4-min.jpg 1x, ./imeg/portfolio-4@2x-min.jpg 2x">
+                                    <img src="./imeg/portfolio-4-min.jpg" alt="наушники" width="370" height="294">
+                                </picture>                               
                                 <p class="portfolio-list__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
                                     для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                             </div>
@@ -113,7 +162,12 @@
                     <li class="portfolio-list__item">
                         <a href="" class="portfolio-list__link">
                             <div class="portfolio-list__overlay">
-                                <img src="./imeg/portfolioimg5.jpg" alt="две коробки" width="370" height="294">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./imeg/portfolio-5-min.jpg 1x, ./imeg/portfolio-5@2x-min.jpg 2x">
+                                    <source media="(min-width: 768px)" srcset="./imeg/portfolio-5-min.jpg 1x, ./imeg/portfolio-5@2x-min.jpg 2x">
+                                    <source media="(min-width: 480px)" srcset="./imeg/portfolio-5-min.jpg 1x, ./imeg/portfolio-5@2x-min.jpg 2x">
+                                    <img src="./imeg/portfolio-5-min.jpg" alt="две коробки" width="370" height="294">
+                                </picture>                               
                                 <p class="portfolio-list__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
                                     для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                             </div>
@@ -126,7 +180,12 @@
                     <li class="portfolio-list__item">
                         <a href="" class="portfolio-list__link">
                             <div class="portfolio-list__overlay">
-                                <img src="./imeg/portfolioimg6.jpg" alt="монитор компютера" width="370" height="294">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./imeg/portfolio-6-min.jpg 1x, ./imeg/portfolio-6@2x-min.jpg 2x">
+                                    <source media="(min-width: 768px)" srcset="./imeg/portfolio-6-min.jpg 1x, ./imeg/portfolio-6@2x-min.jpg 2x">
+                                    <source media="(min-width: 480px)" srcset="./imeg/portfolio-6-min.jpg 1x, ./imeg/portfolio-6@2x-min.jpg 2x">
+                                    <img src="./imeg/portfolio-6-min.jpg" alt="монитор компютера" width="370" height="294">
+                                </picture>                                
                                 <p class="portfolio-list__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
                                     для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                             </div>
@@ -139,7 +198,12 @@
                     <li class="portfolio-list__item">
                         <a href="" class="portfolio-list__link">
                             <div class="portfolio-list__overlay">
-                                <img src="./imeg/portfolioimg7.jpg" alt="развернутый журнал" width="370" height="294">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./imeg/portfolio-7-min.jpg 1x, ./imeg/portfolio-7@2x-min.jpg 2x">
+                                    <source media="(min-width: 768px)" srcset="./imeg/portfolio-7-min.jpg 1x, ./imeg/portfolio-7@2x-min.jpg 2x">
+                                    <source media="(min-width: 480px)" srcset="./imeg/portfolio-7-min.jpg 1x, ./imeg/portfolio-7@2x-min.jpg 2x">
+                                    <img src="./imeg/portfolio-7-min.jpg" alt="развернутый журнал" width="370" height="294">
+                                </picture>                               
                                 <p class="portfolio-list__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
                                     для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                             </div>
@@ -152,7 +216,12 @@
                     <li class="portfolio-list__item">
                         <a href="" class="portfolio-list__link">
                             <div class="portfolio-list__overlay">
-                                <img src="./imeg/portfolioimg8.jpg" alt="бирка с надписью" width="370" height="294">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./imeg/portfolio-8-min.jpg 1x, ./imeg/portfolio-8@2x-min.jpg 2x">
+                                    <source media="(min-width: 768px)" srcset="./imeg/portfolio-8-min.jpg 1x, ./imeg/portfolio-8@2x-min.jpg 2x">
+                                    <source media="(min-width: 480px)" srcset="./imeg/portfolio-8-min.jpg 1x, ./imeg/portfolio-8@2x-min.jpg 2x">
+                                    <img src="./imeg/portfolio-8-min.jpg" alt="бирка с надписью" width="370" height="294">
+                                </picture>                                
                                 <p class="portfolio-list__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
                                     для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                             </div>
@@ -165,7 +234,12 @@
                     <li class="portfolio-list__item">
                         <a href="" class="portfolio-list__link">
                             <div class="portfolio-list__overlay">
-                                <img src="./imeg/portfolioimg9.jpg" alt="человек работает на ноутбуке" width="370" height="294">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./imeg/portfolio-9-min.jpg 1x, ./imeg/portfolio-9@2x-min.jpg 2x">
+                                    <source media="(min-width: 768px)" srcset="./imeg/portfolio-9-min.jpg 1x, ./imeg/portfolio-9@2x-min.jpg 2x">
+                                    <source media="(min-width: 480px)" srcset="./imeg/portfolio-9-min.jpg 1x, ./imeg/portfolio-9@2x-min.jpg 2x">
+                                    <img src="./imeg/portfolio-9-min.jpg" alt="человек работает на ноутбуке" width="370" height="294">
+                                </picture>                                
                                 <p class="portfolio-list__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
                                     для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                             </div>
@@ -239,5 +313,10 @@
             </div>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
+    <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script> -->
+    <script defer src="js/menu.js"></script>
 </body>
 </html>

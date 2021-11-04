@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WEB</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
-
 <body>
     <header class="header">
         <div class="header__container container">
-        <a href="../" class="header__logo"><span class="web">Web</span>Studio</a> 
-        <nav class="navigation">
+            <a href="../" class="header__logo"><span class="web">Web</span>Studio</a>
+            <nav class="navigation">
             <ul class="navigation-menu">
                 <li class="navigation-menu__item"><a href="./index.html" class="navigation-menu__link navigation-menu__link--active">Студия</a></li>
                 <li class="navigation-menu__item"><a href="./portfolio.html" class="navigation-menu__link">Портфолио</a></li>
                 <li class="navigation-menu__item"><a href="" class="navigation-menu__link">Контакты</a></li>
             </ul>
-        </nav>
+            </nav>
             <ul class="contacts-list">
                 <li class="contacts-list__item"><a href="mailto:info@devstudio.com" class="contacts-list__link">
                     <svg class="envelope-icon">
@@ -32,16 +30,44 @@
                         <use href="./imeg/symbol-defs.svg#icon-smartphone"></use>
                     </svg>+38 096 111 11 11</a></li>
             </ul>
+            <button class="header__mob-menu-btn js-open-menu" aria-expanded="false" aria-controls="">
+                <svg class="header__mob-menu-icon">
+                    <use href="./imeg/symbol-defs.svg#icon-mobile-menu"></use>
+                </svg>
+            </button>
+            <div class="container mob-container js-menu-container" id="mobile-menu">
+                <button class="header__mob-menu-btn js-close-menu">
+                    <svg class="header__mob-menu-icon">
+                        <use href="./imeg/symbol-defs.svg#icon-close-mobile-menu"></use>
+                    </svg>
+                </button>
+                <ul class="mobile-nav-menu">
+                    <li class="mobile-nav-menu__item"><a href="./index.html" class="mobile-nav-menu__link mobile-nav-menu__link--active">Студия</a></li>
+                    <li class="mobile-nav-menu__item"><a href="./portfolio.html" class="mobile-nav-menu__link">Портфолио</a></li>
+                    <li class="mobile-nav-menu__item"><a href="" class="mobile-nav-menu__link">Контакты</a></li>
+                </ul>
+                <div class="mob-menu-bottom">
+                    <a href="tel:+380961111111" class="mob-menu-bottom__tel">+38 096 111 11 11</a>
+                    <a href="mailto:info@devstudio.com" class="mob-menu-bottom__mail">info@devstudio.com</a>
+                    <ul class="mob-menu-social">
+                        <li class="mob-menu-social__item"><a href="" class="mob-menu-social__link"></a>Instagram</li>
+                        <li class="mob-menu-social__item"><a href="" class="mob-menu-social__link"></a>Twitter</li>
+                        <li class="mob-menu-social__item"><a href="" class="mob-menu-social__link"></a>Facebook</li>
+                        <li class="mob-menu-social__item"><a href="" class="mob-menu-social__link"></a>LinkedIn</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
     <main class="">
-        <!-- Наши преимущества -->
+        <!-- Герой -->
         <section class="hero">
             <div class="container">
                 <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
                 <button type="button" class="btn" data-modal-open>Заказать услугу</button>
             </div>
         </section>
+        <!-- Наши преимущества -->
         <section class="section">
             <div class="container">
                 <h2 class="section__title visually-hidden">Наши преимущества</h2>
@@ -90,17 +116,17 @@
             <div class="container">
                 <h2 class="section__title">Чем мы занимаемся</h2>
                 <ul class="work">
-                    <li class="work__item"><img src="./imeg/service1.jpg" alt="програмирование" width="370" height="294">
+                    <li class="work__item"><img srcset="./imeg/work1.jpg 1x, ./imeg/work1@2x.jpg 2x" src="./imeg/work1.jpg" alt="програмирование" width="370" height="294">
                     <div class="work__imeg-tumb">
                         <p class="work__imeg-tilte">Десктопные приложения</p>
                     </div>
                 </li>
-                    <li class="work__item"><img src="./imeg/service2.jpg" alt="разработка" width="370" height="294">
+                    <li class="work__item"><img srcset="./imeg/work2.jpg 1x, ./imeg/work2@2x.jpg 2x" src="./imeg/work2.jpg" alt="разработка" width="370" height="294">
                     <div class="work__imeg-tumb">
                         <p class="work__imeg-tilte">Мобильные приложения</p>
                     </div>
                 </li>
-                    <li class="work__item"><img src="./imeg/service3.jpg" alt="дизайн" width="370" height="294">
+                    <li class="work__item"><img srcset="./imeg/work3.jpg 1x, ./imeg/work3@2x.jpg 2x" src="./imeg/work3.jpg" alt="дизайн" width="370" height="294">
                     <div class="work__imeg-tumb">
                         <p class="work__imeg-tilte">Дизайнерские решения</p>
                     </div>
@@ -113,7 +139,13 @@
             <div class="container">
                 <h2 class="section__title">Наша команда</h2>
                 <ul class="team">
-                    <li class="team__item"><img src="./imeg/foto1.jpg" alt="фото Игоря Демьяненко" width="270" height="260">
+                    <li class="team__item">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./imeg/team-1-min.jpg 1x, ./imeg/team-1@2x-min.jpg 2x">
+                            <source media="(min-width: 768px)" srcset="./imeg/team-1-tab-min.jpg 1x, ./imeg/team-1-tab@2x-min.jpg 2x">
+                            <source media="(min-width: 480px)" srcset="./imeg/team-1-mob-min.jpg 1x, ./imeg/team-1-mob@2x-min.jpg 2x">
+                            <img src="./imeg/team-1-min.jpg" alt="фото Игоря Демьяненко" width="270" height="260">
+                        </picture>
                         <div class="team-content">
                             <h3 class="team-content__subtitle">Игорь Демьяненко</h3>
                             <p class="team-content__text" lang="en">Product Designer</p>
@@ -149,7 +181,13 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="team__item"><img src="./imeg/foto2.jpg" alt="фото Ольги Репиной" width="270" height="260">
+                    <li class="team__item">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./imeg/team-2-min.jpg 1x, ./imeg/team-2@2x-min.jpg 2x">
+                            <source media="(min-width: 768px)" srcset="./imeg/team-2-tab-min.jpg 1x, ./imeg/team-2-tab@2x-min.jpg 2x">
+                            <source media="(min-width: 480px)" srcset="./imeg/team-2-mob-min.jpg 1x, ./imeg/team-2-mob@2x-min.jpg 2x">
+                            <img src="./imeg/team-2-min.jpg" alt="фото Ольги Репиной" width="270" height="260">
+                        </picture>
                         <div class="team-content">
                             <h3 class="team-content__subtitle">Ольга Репина</h3>
                             <p class="team-content__text" lang="en">Frontend Developer</p>
@@ -185,7 +223,13 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="team__item"><img src="./imeg/foto3.jpg" alt="фото Николая Тарасова" width="270" height="260">
+                    <li class="team__item">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./imeg/team-3-min.jpg 1x, ./imeg/team-3@2x-min.jpg 2x">
+                            <source media="(min-width: 768px)" srcset="./imeg/team-3-tab-min.jpg 1x, ./imeg/team-3-tab@2x-min.jpg 2x">
+                            <source media="(min-width: 480px)" srcset="./imeg/team-3-mob-min.jpg 1x, ./imeg/team-3-mob@2x-min.jpg 2x">
+                            <img src="./imeg/team-3-min.jpg" alt="фото Николая Тарасова" width="270" height="260">
+                        </picture>
                         <div class="team-content">
                             <h3 class="team-content__subtitle">Николай Тарасов</h3>
                             <p class="team-content__text" lang="en">Marketing</p>
@@ -221,7 +265,13 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="team__item"><img src="./imeg/foto4.jpg" alt="фото Михаила Ермакова" width="270" height="260">
+                    <li class="team__item">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./imeg/team-4-min.jpg 1x, ./imeg/team-4@2x-min.jpg 2x">
+                            <source media="(min-width: 768px)" srcset="./imeg/team-4-tab-min.jpg 1x, ./imeg/team-4-tab@2x-min.jpg 2x">
+                            <source media="(min-width: 480px)" srcset="./imeg/team-4-mob-min.jpg 1x, ./imeg/team-4-mob@2x-min.jpg 2x">
+                            <img src="./imeg/team-4-min.jpg" alt="фото Михаила Ермакова" width="270" height="260">
+                        </picture>
                         <div class="team-content">
                             <h3 class="team-content__subtitle">Михаил Ермаков</h3>
                             <p class="team-content__text" lang="en">UI Designer</p>
@@ -435,6 +485,10 @@
         </div>
     </div> 
     <script src="./js/modal.js"></script>
+    <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script> -->
+    <script defer src="js/menu.js"></script>
 </body>
 
 </html>

@@ -1,10 +1,8 @@
 .hero {
   max-width: 1600px;
-  height: 600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  margin-left: auto;
-  margin-right: auto;
+  height: 400px;
+  padding: 118px 0;
+  margin: 0 auto;
 
   text-align: center;
 
@@ -14,22 +12,78 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../imeg/hero.jpg);
+    url(../imeg/bg-hero-mobile.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../imeg/bg-hero-mobile@2x.jpg);
+  }
+
+  @media screen and (min-width: 768px){
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../imeg/bg-hero-tab.jpg);
+    @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../imeg/bg-hero-tab@2x.jpg);
+  }
+  }
+
+  @media screen and (min-width: 1200px){
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../imeg/bg-hero.jpg);
+    @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../imeg/bg-hero@2x.jpg);
+  }
+  }
 }
 .hero__title {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-
-  max-width: 696px;
+  max-width: 360px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
   color: var(--white-color);
+
+  @media screen and (min-width: 1200px){
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
