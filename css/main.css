@@ -699,6 +699,12 @@ textarea::placeholder {
   margin-bottom: 32px;
 }
 
+@media screen and (max-width: 479px) {
+  .mobile-nav-menu__item {
+    height: 10.8vw;
+  }
+}
+
 .mobile-nav-menu__link {
   position: relative;
   font-weight: 500;
@@ -711,6 +717,12 @@ textarea::placeholder {
 
 .mobile-nav-menu__link:hover, .mobile-nav-menu__link:focus {
   color: var(--accent-color);
+}
+
+@media screen and (max-width: 479px) {
+  .mobile-nav-menu__link {
+    font-size: 8.3vw;
+  }
 }
 
 .mobile-nav-menu__link--active {
@@ -733,6 +745,12 @@ textarea::placeholder {
   bottom: 48px;
 }
 
+@media screen and (max-width: 479px) {
+  .mob-menu-bottom {
+    bottom: 10vw;
+  }
+}
+
 .mob-menu-bottom__tel {
   font-weight: 500;
   font-size: 34px;
@@ -742,6 +760,13 @@ textarea::placeholder {
   color: var(--accent-color);
 }
 
+@media screen and (max-width: 479px) {
+  .mob-menu-bottom__tel {
+    font-size: 7.1vw;
+    margin-bottom: 6.7vw;
+  }
+}
+
 .mob-menu-bottom__mail {
   font-weight: 500;
   font-size: 24px;
@@ -749,6 +774,13 @@ textarea::placeholder {
   letter-spacing: 0.02em;
   margin-bottom: 64px;
   color: var(--primery-text-color);
+}
+
+@media screen and (max-width: 479px) {
+  .mob-menu-bottom__mail {
+    font-size: 5vw;
+    margin-bottom: 13.3vw;
+  }
 }
 
 .mob-menu-social {
@@ -768,6 +800,12 @@ textarea::placeholder {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   margin-right: 10px;
   padding-right: 10px;
+}
+
+@media screen and (max-width: 479px) {
+  .mob-menu-social__item {
+    font-size: 3.8vw;
+  }
 }
 
 .hero {
