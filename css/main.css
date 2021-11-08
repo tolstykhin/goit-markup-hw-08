@@ -876,26 +876,24 @@ textarea::placeholder {
 }
 
 .advantages {
-  margin-bottom: -30px;
+  margin: -15px;
 }
 
 @media screen and (min-width: 768px) {
   .advantages {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -30px;
   }
 }
 
 .advantages__item {
   width: 100%;
-  margin-bottom: 30px;
+  margin: 15px;
 }
 
 @media screen and (min-width: 768px) {
   .advantages__item {
     flex-basis: calc(100% / 2 - 30px);
-    margin-right: 30px;
   }
 }
 
@@ -975,26 +973,24 @@ textarea::placeholder {
 }
 
 .team {
-  margin-bottom: -30px;
+  margin: -15px;
 }
 
 @media screen and (min-width: 768px) {
   .team {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -30px;
   }
 }
 
 .team__item {
   width: 100%;
-  margin-bottom: 30px;
+  margin: 15px;
 }
 
 @media screen and (min-width: 768px) {
   .team__item {
     flex-basis: calc(100% / 2 - 30px);
-    margin-right: 30px;
   }
 }
 
@@ -1038,16 +1034,14 @@ textarea::placeholder {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-right: -30px;
-  margin-bottom: -30px;
+  margin: -15px;
 }
 
 .clients__item {
   width: 100%;
   height: 92px;
   flex-basis: calc(100% / 2 - 30px);
-  margin-right: 30px;
-  margin-bottom: 30px;
+  margin: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1244,10 +1238,10 @@ textarea::placeholder {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .footer__container {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
   }
 }
 
@@ -1257,15 +1251,9 @@ textarea::placeholder {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .footer__contact {
-    margin-right: 165px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer__contact {
-    margin-right: 70px;
+    margin-bottom: 60px;
   }
 }
 
@@ -1292,12 +1280,6 @@ textarea::placeholder {
   color: var(--white-color);
 }
 
-@media screen and (max-width: 1199px) {
-  .footer__address {
-    margin-bottom: 60px;
-  }
-}
-
 .address-list__item:not(:last-child) {
   margin-bottom: 8px;
 }
@@ -1317,15 +1299,9 @@ textarea::placeholder {
   color: var(--accent-color);
 }
 
-@media screen and (max-width: 767px) {
-  .footer-social {
-    margin-bottom: 60px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .footer-form {
-    margin-left: 93px;
+    margin-top: 60px;
   }
 }
 
